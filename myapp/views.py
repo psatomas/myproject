@@ -4,3 +4,7 @@ from django.http import HttpResponse
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
+
+def counter(request):
+    text = request.GET['text']
+    return render(request, 'counter.html')
